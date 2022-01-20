@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        agp_version = '7.0.4'
+    }
+    ext.kotlin_version = '1.5.20'
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    roomVersion = '2.2.0'
+    archLifecycleVersion = '2.2.0-beta01'
+    androidxArchVersion = '2.0.0'
+    coroutines = '1.2.0'
+}
